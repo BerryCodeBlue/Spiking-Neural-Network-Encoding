@@ -1,1 +1,0 @@
-# Spiking-Neural-Network-Encoding
