@@ -62,19 +62,3 @@ class Synapses():
             #
             # self.w += self.learning_rate * (LTP + LTD).mean(0)
             # self.w_stor[conn_idx, conn_idx2] = self.w
-
-#TODO through XXXX sum(w * ). the post neurons will learn how to spike to the input of the pre neuron. the pro
-# problem is how to learn. Given an input, the model will tell you in the past timepoints which
-# kind of weights combination. So how to train? What about a lot of error neurons. it trains a certain input, which nriaon to fire.
-# One pre neuron corresponds to 10 post synapses. learn the most activated synapses. So, the next time, the given input will have
-# a learned combination of synapses.
-
-# One more thing is, the error synapses have connections as well. they are like time connected.(more than 2 error points.) the distance of e1, e2 and e3
-# should follow some constrain rules. like if is always e1+e2 > e3?
-
-# And are the delta x, delta y, delta z influence each other? how to test. NO, YOU CANNOT TEST. vo: delta xyz, and true delta xyz. use training to find the weights to indicate y might also influence xe
-# Idea one: What about the place field. the drawx, drawy, drawz + error correction is the place field.
-# Idea Two: trasition matrix. input image: output the accurate ones.
-# use weights as scores.
-
-#delta_x is caused by e1, e2, e3. e is the pre, delta x is the post. after trained, the spike trains of delta x ia controlled by the e signals. the delta_drawx, the delta groundtruth x. the error.
